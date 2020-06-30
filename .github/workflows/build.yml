@@ -7,6 +7,13 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
+      - name: import GPG key
+        id: import_gpg
+        uses: crazy-max/ghaction-import-gpg@v2
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+          PASSPHRASE: ${{ secrets.PASSPHRASE }}
+
       - name: build package
         uses: jarias/makepkg-action@v1
 
@@ -14,13 +21,6 @@ jobs:
         with:
           name: package
           path: '*.xz'
-
-      - name: import GPG key
-        id: import_gpg
-        uses: crazy-max/ghaction-import-gpg@v2
-        env:
-          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
-          PASSPHRASE: ${{ secrets.PASSPHRASE }}
 
       - name: publish
         run: .github/publish.sh
