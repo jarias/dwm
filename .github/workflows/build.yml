@@ -16,6 +16,8 @@ jobs:
 
       - name: build package
         uses: jarias/makepkg-action@v1
+        env:
+          GPGKEY: arch@menari.io
 
       - uses: actions/upload-artifact@v2
         with:
