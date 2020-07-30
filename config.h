@@ -69,6 +69,7 @@ static const char *slockcmd[]  = { "slock", NULL };
 static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
 static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
 static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
+static const char *powermenucmd[] = { "rofi-powermenu.sh", NULL };
 
 static Key keys[] = {
 	/* modifier                     key                      function        argument */
@@ -110,7 +111,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_e,                    spawn,           {.v = powermenucmd} },
 };
 
 /* button definitions */
