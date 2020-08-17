@@ -67,9 +67,9 @@ static const char *rofipasscmd[] = { "rofi-pass", NULL };
 static const char *termcmd[]  = { "kitty", NULL };
 static const char *flameshotcmd[]  = { "flameshot", "gui", NULL };
 static const char *slockcmd[]  = { "slock", NULL };
-static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
-static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
-static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
+static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%",     NULL };
+static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%",     NULL };
+static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "@DEFAULT_SINK@", "toggle",  NULL };
 static const char *powermenucmd[] = { "rofi-powermenu.sh", NULL };
 
 static Key keys[] = {
