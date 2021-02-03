@@ -10,12 +10,12 @@ arch=('i686' 'x86_64')
 license=('MIT')
 options=(zipman)
 depends=('libx11' 'libxinerama' 'libxft' 'freetype2')
-source=(http://dl.suckless.org/dwm/dwm-$pkgver.tar.gz patches/dwm-config-1.0.10.patch)
+source=(http://dl.suckless.org/dwm/dwm-$pkgver.tar.gz dwm-config-1.0.10.patch)
 sha256sums=('97902e2e007aaeaa3c6e3bed1f81785b817b7413947f1db1d3b62b8da4cd110e' 'def4b01730a02c81963e17edfad36e6444bde7a62b3113361d026d2fee565715')
 
 prepare() {
   cd "$srcdir/$pkgname-$pkgver"
-  patch --forward --strip=1 --input="../../patches/dwm-config-1.0.10.patch"
+  patch --forward --strip=1 --input="$srcdir/dwm-config-1.0.10.patch"
 }
 
 build() {
