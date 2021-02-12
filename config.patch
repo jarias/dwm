@@ -1,5 +1,5 @@
 diff --git a/config.def.h b/config.def.h
-index 1c0b587..a24883a 100644
+index 1c0b587..c94dc48 100644
 --- a/config.def.h
 +++ b/config.def.h
 @@ -1,17 +1,19 @@
@@ -37,7 +37,7 @@ index 1c0b587..a24883a 100644
 +	/* class      instance    title                       tags mask     isfloating   monitor */
 +	{ "Gimp",     NULL,       NULL,                       0,            1,           -1 },
 +	{ "Firefox",  NULL,       NULL,                       0,            0,           -1 },
-+	{ "Firefox",  "Toolkit",  "Picture-in-Picture",       TAGMASK,      1,           -1 },
++	{ "Firefox",  NULL,       "Picture-in-Picture",       TAGMASK,      1,           -1 },
 +	{ NULL,        NULL,      "Picture in picture",       TAGMASK,      1,           -1 },
 +	{ "zoom",     "zoom",     "Zoom - Free Account",      0,            1,           -1 },
 +	{ "Dunst",    "Dunst"     "Dunst",                    0,            1,           -1 },
