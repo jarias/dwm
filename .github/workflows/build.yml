@@ -18,8 +18,3 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           BUCKET: arch.menari.io
           REPO: menari
-
-      - uses: actions/upload-artifact@v2
-        with:
-          name: package
-          path: '*.xz'
